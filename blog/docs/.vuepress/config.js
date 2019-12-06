@@ -10,7 +10,7 @@ module.exports = {
     lineNumbers: false // 代码块显示行号
   },
   themeConfig: {
-    lastUpdated: "上次更新时间", // 文档更新时间：每个文件git最后提交的时间
+    lastUpdated: '上次更新', // 文档更新时间：每个文件git最后提交的时间
     search: true,
     searchMaxSuggestions: 10,
     // sidebar: 'auto',//自动生成侧栏
