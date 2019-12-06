@@ -1,4 +1,5 @@
-#### 准备工作
+## 准备工作
+
 安装tinymce-vue
 `npm install @tinymce/tinymce-vue -S`
 下载tinymce
@@ -7,7 +8,8 @@
 > 下载[中文语言包](https://www.tiny.cloud/get-tiny/language-packages/);
 > 下载完成后将其解压到static\tinymce目录下面;
 
-#### 组件封装：
+## 组件封装
+
 ```vue
 <template>
     <div>
@@ -77,7 +79,8 @@
     }
 </script>
 ```
-####  页面中使用:
+## 页面中使用
+
 ```vue
 <Tinymce :curValue="initContent" @input="newContent"></Tinymce>
 
