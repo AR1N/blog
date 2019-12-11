@@ -3,13 +3,31 @@
 `MVVM` 是 `Model-View-ViewModel `的缩写。mvvm 是一种设计思想。Model 层代表数据模型，也可以在 Model 中定义数据修改和操作的业务逻辑；View 代表 UI 组件，它负责将数据模型转化成 UI 展现出来，ViewModel 是一个同步 View 和 Model 的对象。
 在 MVVM 架构下，View 和 Model 之间并没有直接的联系，而是通过 ViewModel 进行交互，Model 和 ViewModel 之间的交互是双向的， 因此 View 数据的变化会同步到 Model 中，而 Model 数据的变化也会立即反应到 View 上。
 ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而 View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作 DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。
+
 ## vue生命周期的理解：
 
-总共分为 8 个阶段创建前/后，载入前/后，更新前/后，销毁前/后。
-创建前/后： 在` beforeCreate` 阶段，vue 实例的挂载元素 el 还没有。
-载入前/后：在 `beforeMount` 阶段，vue 实例的$el 和 data 都初始化了，但还是挂载之前为虚拟的 dom 节点，data.message 还未替换。在 `mounted` 阶段，vue 实例挂载完成，data.message 成功渲染。
-更新前/后：当 data 变化时，会触发` beforeUpdate` 和 `updated` 方法。
-销毁前/后：在执行 `destroy` 方法后，对 data 的改变不会再触发周期函数，说明此时 vue 实例已经解除了事件监听以及和 dom 的绑定，但是 dom 结构依然存在。
+> 总共分为 8 个阶段创建前/后，载入前/后，更新前/后，销毁前/后。
+> 创建前/后： 在` beforeCreate` 阶段，vue 实例的挂载元素 el 还没有。
+> 载入前/后：在 `beforeMount` 阶段，vue 实例的$el 和 data 都初始化了，但还是挂载之前为虚拟的 dom 节点，data.message 还未替换。在 `mounted` 阶段，vue 实例挂载完成，data.message 成功渲染。
+> 更新前/后：当 data 变化时，会触发` beforeUpdate` 和 `updated` 方法。
+> 销毁前/后：在执行 `destroy` 方法后，对 data 的改变不会再触发周期函数，说明此时 vue 实例已经解除了事件监听以及和 dom 的绑定，但是 dom 结构依然存在。
+
+1. beforeCreated：生成$options选项，并给实例添加生命周期相关属性。在实例初始化之后，在 数据观测(data observer) 和event/watcher 事件配置之前被调用，也就是说，data，watcher，methods都不存在这个阶段。但是有一个对象存在，那就是$route，因此此阶段就可以根据路由信息进行重定向等操作。
+
+2. created：初始化与依赖注入相关的操作，会遍历传入methods的选项，初始化选项数据，从$options获取数据选项(vm.$options.data)，给数据添加‘观察器’对象并创建观察器，定义getter、setter存储器属性。在实例创建之后被调用，该阶段可以访问data，使用watcher、events、methods，也就是说 数据观测(data observer) 和event/watcher 事件配置 已完成。但是此时dom还没有被挂载。该阶段允许执行http请求操作。
+
+3. beforeMount：将HTML解析生成AST节点，再根据AST节点动态生成渲染函数。**相关render函数首次被调用**(重点)。
+
+4. mounted：在挂载完成之后被调用，执行render函数生成虚拟dom，创建真实dom替换虚拟dom，并挂载到实例。可以操作dom，比如事件监听
+
+5. beforeUpdate：$vm.data更新之后，虚拟dom重新渲染之前被调用。在这个钩子可以修改$vm.data，并不会触发附加的冲渲染过程。
+
+6. updated：虚拟dom重新渲染后调用，若再次修改$vm.data，会再次触发beforeUpdate、updated，进入死循环。
+
+7. beforeDestroy：实例被销毁前调用，也就是说在这个阶段还是可以调用实例的。
+
+8. destroyed：实例被销毁后调用，所有的事件监听器已被移除，子实例被销毁。
+
 ## vue的双向绑定的原理：
 
 > vue.js 是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。
