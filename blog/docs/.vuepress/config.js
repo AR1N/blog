@@ -40,8 +40,10 @@ module.exports = {
         title:'VUE',
         collapsable: true, //是否展开
         children: [
+          ['./VUE/Vue中封装使用tinymce富文本编辑器', 'Vue中封装使用tinymce富文本编辑器'],
+          ['./VUE/导出数据为word，excel，pdf', '导出数据为word，excel，pdf'],
           ['./VUE/VUE相关问题', 'VUE相关问题'],
-          ['./VUE/Vue中封装使用tinymce富文本编辑器', 'Vue中封装使用tinymce富文本编辑器']
+          
         ]
       },
       {

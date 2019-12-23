@@ -5,7 +5,7 @@
 3. 获取容器文档内容`let htmlContent = document.getElementById
 ('domHtml').innerHTML`；
 4. 创建Blob对象:（放入blob对象中，转换类型，创建下载链接并执行）
-```
+```javascript
  let blob = new Blob([this.htmlContent ], {
                     type: 'application/msword'
  //word文档为msword,docx为vnd.openxmlformats-officedocument.wordprocessingml.document;charset=utf-8,pdf文档为pdf,msexcel 为excel
