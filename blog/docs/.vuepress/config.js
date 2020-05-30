@@ -28,7 +28,7 @@ module.exports = {
           { text: 'GitHub主页', link: 'https://github.com/AR1N' },
           {
             text: '关于RESUME',
-            link: 'https://ar1n.github.io/resume'
+            link: 'https://kcren.gitee.io/resume'
           }
         ]
       }
@@ -53,7 +53,14 @@ module.exports = {
           ['./MINI/小程序npm的方式使用UI框架及组件化开发', '小程序npm的方式使用UI框架及组件化开发'],
           ['./MINI/微信小程序商城开发常见问题汇总', '微信小程序商城开发常见问题汇总']
         ]
-      }
+      },
+      {
+        title:'跨平台',
+        collapsable: true, //是否展开
+        children: [
+          ['./CROSS/uniapp使用相关问题记录', 'uniapp使用相关问题记录']
+        ]
+      },
     ]
   }
 }
