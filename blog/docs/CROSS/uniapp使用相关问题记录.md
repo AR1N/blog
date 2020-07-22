@@ -60,3 +60,34 @@
   >  但是这两种方案都有一定的瑕疵，第一种最大的问题就是没有缓存机制，每次切换都是重新渲染，第二种容易出现选中item和对应页面不一致的情况（可通过vuex解决）。总之自定义tabbar是有很多问题的，目前uni官方也还没有出相关api去解决类似场景:no_mouth:    
   
   ​	时隔几天，再次更新，项目中使用了第二种思路，但在ios在切换tabbar的时候，会有机率出现tabbar被抬高底部白条的情况， 而且只有第一次打开的tabbar页会有这个问题，切换至其他tabbar又恢复正常，类似问题 [【报Bug】uni-app V3编译器，uni.hideTabBar()不能正确隐藏底部tabbar](https://ask.dcloud.net.cn/question/95796)  ,最后调试发现 reLaunch 页面才能解决~
+  
+  ## 导航栏底部边框
+  * 如需在导航栏底部有边框，可以在page.json里对应页面的style属性下配置：
+  ```
+  "style" : {
+                "navigationBarTitleText": "导航标题",
+                "app-plus": {
+                    "titleNView": {
+                        "splitLine": {
+                            "color": "#f5f6f9"//边框颜色
+                        }
+                    }
+                }
+            }
+```
+
+## 下拉刷新
+
+* 如果是自定义导航栏，使用系统默认的下拉刷新，会使在下拉过程中导航栏一起被拉下来，因为默认使用的是default刷新样式，这时需要使用circle刷新样式才不会出现问题，需要在page.json里对应页面的style属性下配置：
+```
+"app-plus": {
+                   "bounce": "none",//橡皮回弹效果
+                   "scrollIndicator": "none",//不显示滚动条
+                   "pullToRefresh": {
+                       "support": true,
+                       "color": "#2F89FC",//圆圈颜色
+                       "style": "circle",
+                       "offset": "50px"//离顶部的距离
+                   }
+               }
+```
