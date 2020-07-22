@@ -62,8 +62,10 @@
   ​	时隔几天，再次更新，项目中使用了第二种思路，但在ios在切换tabbar的时候，会有机率出现tabbar被抬高底部白条的情况， 而且只有第一次打开的tabbar页会有这个问题，切换至其他tabbar又恢复正常，类似问题 [【报Bug】uni-app V3编译器，uni.hideTabBar()不能正确隐藏底部tabbar](https://ask.dcloud.net.cn/question/95796)  ,最后调试发现 reLaunch 页面才能解决~
   
   ## 导航栏底部边框
+  
   * 如需在导航栏底部有边框，可以在page.json里对应页面的style属性下配置：
-  ```
+  
+  ``` 
   "style" : {
                 "navigationBarTitleText": "导航标题",
                 "app-plus": {
@@ -79,6 +81,7 @@
 ## 下拉刷新
 
 * 如果是自定义导航栏，使用系统默认的下拉刷新，会使在下拉过程中导航栏一起被拉下来，因为默认使用的是default刷新样式，这时需要使用circle刷新样式才不会出现问题，需要在page.json里对应页面的style属性下配置：
+
 ```
 "app-plus": {
                    "bounce": "none",//橡皮回弹效果
