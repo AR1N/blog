@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://ftp.bmp.ovh/imgs/2020/05/81b19b3314dad88a.png">
+  <img src="https://i.loli.net/2020/07/13/gXbIQnzEU2f51HD.png">
 </p>
 
 
