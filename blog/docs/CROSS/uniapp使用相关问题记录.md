@@ -1,4 +1,4 @@
-> 不知不觉有好一段时间没有更新了，由于疫情问题，各方面都受到了一定的影响，最近终于好些了，也不用每天扫健康码了~然后一个原因是最近比较忙，没有时间更新。最近在用uniapp做混合APP，遇到一些问题，:pencil2: 记录一下~
+最近在用uniapp做混合APP，遇到的一些问题，:pencil2: 记录一下~
 
 ## :iphone: 适配问题：
 
@@ -90,7 +90,79 @@
             }
   ```
 
-
+## 版本更新
+```
+    onLaunch: function() {
+        plus.screen.lockOrientation('portrait-primary');//锁定屏幕方向
+        
+        let _this = this;
+        //版本更新
+        plus.runtime.getProperty(plus.runtime.appid, function(app) {
+            let version = app.version;
+            // console.log(version)
+            _this.$api.common.updateVersion({ version: version }).then(res => {
+                if (res.code == 1 && res.data.status == 1) {
+                    let updateType = res.data.up_type;
+                    if (updateType == 1) {
+                        //1热更新，2整包更新
+                        let url = res.data.url_wgt;
+                        installHotUpdate(url);
+                    } else {
+                        let andriod = res.data.url_android;
+                        let ios = res.data.url_ios;
+                        installApp(andriod, ios);
+                    }
+                }
+            });
+            //热更新
+            function installHotUpdate(url) {
+                uni.downloadFile({
+                    url: url,
+                    success: downloadResult => {
+                        if (downloadResult.statusCode === 200) {
+                            plus.runtime.install(
+                                downloadResult.tempFilePath,
+                                {
+                                    force: true
+                                },
+                                function() {
+                                    //安装成功
+                                    plus.runtime.restart();
+                                },
+                                function(e) {
+                                    uni.showToast({
+                                        icon: 'none',
+                                        title: '热更新失败'
+                                    });
+                                }
+                            );
+                        }
+                    }
+                });
+            }
+            //整包更新
+            function installApp(url_android, url_ios) {
+                uni.showModal({
+                    title: '检测到新版本',
+                    content: '请更新到最新版本继续使用',
+                    showCancel: false,
+                    success: res => {
+                        if (res.confirm) {
+                            let osType = plus.os.name; //平台类型
+                            if (osType == 'Android') {
+                                //安卓下载地址
+                                plus.runtime.openURL(url_android);
+                            } else {
+                                //苹果下载地址
+                                plus.runtime.openURL(url_ios);
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    }
+```
 
 ## 模块权限配置
 
