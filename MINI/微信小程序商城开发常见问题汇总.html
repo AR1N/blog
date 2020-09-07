@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>1.授权 | Aren的前端笔记</title>
+    <meta name="description" content="Aren">
+    <link rel="icon" href="/blog/img/logo.ico">
+  <link rel="manifest" href="/blog/manifest.json">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.d10d322b.css" as="style"><link rel="preload" href="/blog/assets/js/app.18d8ef11.js" as="script"><link rel="preload" href="/blog/assets/js/2.17328759.js" as="script"><link rel="preload" href="/blog/assets/js/7.c3a78705.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.dce95530.js"><link rel="prefetch" href="/blog/assets/js/11.23538116.js"><link rel="prefetch" href="/blog/assets/js/12.417c2c1b.js"><link rel="prefetch" href="/blog/assets/js/13.a910fd57.js"><link rel="prefetch" href="/blog/assets/js/14.476f21c2.js"><link rel="prefetch" href="/blog/assets/js/3.604591ad.js"><link rel="prefetch" href="/blog/assets/js/4.5d183e56.js"><link rel="prefetch" href="/blog/assets/js/5.00b2c5ca.js"><link rel="prefetch" href="/blog/assets/js/6.e29b6351.js"><link rel="prefetch" href="/blog/assets/js/8.7213f2ee.js"><link rel="prefetch" href="/blog/assets/js/9.a19498f4.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.d10d322b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><!----> <span class="site-name">Aren的前端笔记</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/index/" class="nav-link">前端笔记</a></div><div class="nav-item"><a href="http://rkchuan.top" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  hexo博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AR1N" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub主页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kcren.gitee.io/resume" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于RESUME
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/index/" class="nav-link">前端笔记</a></div><div class="nav-item"><a href="http://rkchuan.top" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  hexo博客
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="GitHub" class="dropdown-title"><span class="title">GitHub</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/AR1N" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub主页
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li><li class="dropdown-item"><!----> <a href="https://kcren.gitee.io/resume" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  关于RESUME
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>VUE</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>小程序</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/MINI/小程序npm的方式使用UI框架及组件化开发.html" class="sidebar-link">小程序npm的方式使用UI框架及组件化开发</a></li><li><a href="/blog/MINI/微信小程序商城开发常见问题汇总.html" class="active sidebar-link">微信小程序商城开发常见问题汇总</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/MINI/微信小程序商城开发常见问题汇总.html#_1-授权" class="sidebar-link">1.授权</a></li><li class="sidebar-sub-header"><a href="/blog/MINI/微信小程序商城开发常见问题汇总.html#_2-全面屏适配（兼容）" class="sidebar-link">2.全面屏适配（兼容）</a></li><li class="sidebar-sub-header"><a href="/blog/MINI/微信小程序商城开发常见问题汇总.html#_3-自定义顶部导航栏" class="sidebar-link">3.自定义顶部导航栏</a></li><li class="sidebar-sub-header"><a href="/blog/MINI/微信小程序商城开发常见问题汇总.html#_4-使用犸良（lottie）动画到小程序" class="sidebar-link">4.使用犸良（lottie）动画到小程序</a></li></ul></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>跨平台</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>node.js</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="_1-授权"><a href="#_1-授权" class="header-anchor">#</a> 1.授权</h2> <blockquote><p>在未授权情况下，首次进入会调起小程序原生权限授权弹框，后面进入则不会再弹出，so，在用户拒绝授权后，后面进入需要引导用户开启相应的权限，才能进行下一步的操作。</p></blockquote> <p>（以保存图片到相册权限为例）</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token comment">//授权</span>
+    <span class="token function-variable function">onSaveImg</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        wx<span class="token punctuation">.</span><span class="token function">getSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.writePhotosAlbum'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token keyword">undefined</span> <span class="token operator">&amp;&amp;</span> res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.writePhotosAlbum'</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    wx<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                        title<span class="token punctuation">:</span> <span class="token string">'提示'</span><span class="token punctuation">,</span>
+                        content<span class="token punctuation">:</span> <span class="token string">'本次操作需要保存到相册权限，请确认授权'</span><span class="token punctuation">,</span>
+                        <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                            <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>cancel<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                    title<span class="token punctuation">:</span> <span class="token string">'取消授权'</span><span class="token punctuation">,</span>
+                                    icon<span class="token punctuation">:</span> <span class="token string">'none'</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>confirm<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                wx<span class="token punctuation">.</span><span class="token function">openSetting</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                    <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">dataAu</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                        <span class="token keyword">if</span> <span class="token punctuation">(</span>dataAu<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">&quot;scope.writePhotosAlbum&quot;</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                            wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                                title<span class="token punctuation">:</span> <span class="token string">'授权成功'</span><span class="token punctuation">,</span>
+                                                icon<span class="token punctuation">:</span> <span class="token string">'success'</span>
+                                            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                            _this<span class="token punctuation">.</span><span class="token function">authSaveImg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                                        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                                            wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                                title<span class="token punctuation">:</span> <span class="token string">'授权失败'</span><span class="token punctuation">,</span>
+                                                icon<span class="token punctuation">:</span> <span class="token string">'none'</span>
+                                            <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                        <span class="token punctuation">}</span>
+                                    <span class="token punctuation">}</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span>
+                    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>authSetting<span class="token punctuation">[</span><span class="token string">'scope.writePhotosAlbum'</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    _this<span class="token punctuation">.</span><span class="token function">authSaveImg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                    _this<span class="token punctuation">.</span><span class="token function">authSaveImg</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">fail</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token comment">//调用接口失败</span>
+                  <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">//保存图片</span>
+    <span class="token function-variable function">authSaveImg</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">let</span> _this <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+        wx<span class="token punctuation">.</span><span class="token function">authorize</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            scope<span class="token punctuation">:</span> <span class="token string">'scope.writePhotosAlbum'</span><span class="token punctuation">,</span>
+            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">let</span> imgUrl <span class="token operator">=</span> _this<span class="token punctuation">.</span>data<span class="token punctuation">.</span>imgUrl<span class="token punctuation">;</span>
+                wx<span class="token punctuation">.</span><span class="token function">downloadFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    url<span class="token punctuation">:</span> imgUrl <span class="token punctuation">,</span>
+                    <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        wx<span class="token punctuation">.</span><span class="token function">saveImageToPhotosAlbum</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                            filePath<span class="token punctuation">:</span> res<span class="token punctuation">.</span>tempFilePath<span class="token punctuation">,</span>
+                            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                                    title<span class="token punctuation">:</span> <span class="token string">'保存成功'</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                            <span class="token punctuation">}</span>
+                        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">fail</span><span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+                wx<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+                    title<span class="token punctuation">:</span> <span class="token string">'授权失败'</span><span class="token punctuation">,</span>
+                    icon<span class="token punctuation">:</span> <span class="token string">'none'</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div><h2 id="_2-全面屏适配（兼容）"><a href="#_2-全面屏适配（兼容）" class="header-anchor">#</a> 2.全面屏适配（兼容）</h2> <div class="language-js extra-class"><pre class="language-js"><code>        <span class="token comment">//app.js</span>
+<span class="token function-variable function">onLaunch</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      wx<span class="token punctuation">.</span><span class="token function">getSystemInfo</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token comment">//获取手机屏幕信息</span>
+            <span class="token function-variable function">success</span><span class="token punctuation">:</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+                <span class="token keyword">if</span> <span class="token punctuation">(</span>res<span class="token punctuation">.</span>screenHeight <span class="token operator">-</span> res<span class="token punctuation">.</span>windowHeight <span class="token operator">-</span> res<span class="token punctuation">.</span>statusBarHeight <span class="token operator">-</span> <span class="token number">32</span> <span class="token operator">&gt;</span> <span class="token number">72</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">this</span><span class="token punctuation">.</span>globalData<span class="token punctuation">.</span>isFullScreen <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span><span class="token comment">//是全面屏</span>
+                <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token function">fail</span><span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+
+
+        <span class="token comment">//index.wxml</span>
+<span class="token operator">&lt;</span>view <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;btmBar {{isFullScreen?'fullScreenClass':''}}&quot;</span><span class="token operator">&gt;</span>  <span class="token comment">//底部固定按钮</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span>
+
+        <span class="token comment">//app.wxss</span>
+<span class="token comment">/* 全面屏适配 */</span>
+<span class="token punctuation">.</span>fullScreenClass<span class="token punctuation">{</span>
+	padding<span class="token operator">-</span>bottom<span class="token punctuation">:</span> <span class="token number">68</span>rpx<span class="token operator">!</span>important<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_3-自定义顶部导航栏"><a href="#_3-自定义顶部导航栏" class="header-anchor">#</a> 3.自定义顶部导航栏</h2> <blockquote><p>顶部导航栏根据机型不同，距离顶部的距离也不同。通常来说是与小程序的胶囊按钮在同一水平线上</p></blockquote> <div class="language-css extra-class"><pre class="language-css"><code><span class="token selector">//app.js
+onLaunch: function()</span> <span class="token punctuation">{</span>
+   let menuButtonObject = wx.<span class="token function">getMenuButtonBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>//获取胶囊按钮的位置
+   this.globalData.topDistance = menuButtonObject.top<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+<span class="token selector">//custom.json</span>
+<span class="token punctuation">{</span>
+  <span class="token string">&quot;navigationStyle&quot;</span><span class="token punctuation">:</span><span class="token string">&quot;custom&quot;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">//custom.wxml
+&lt;view class=&quot;topBar&quot; style=&quot;top:{{topDistance}}px&quot;&gt;
+&lt;/view&gt;
+
+//custom.wxss
+.topBar</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 999<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="_4-使用犸良（lottie）动画到小程序"><a href="#_4-使用犸良（lottie）动画到小程序" class="header-anchor">#</a> 4.使用犸良（lottie）动画到小程序</h2> <blockquote><p>首先需要安装让微信小程序可以调用lottie.js的动画的npm插件，<code>npm i -S lottie-miniapp</code>;
+然后把下载的json动画文件用编辑器打开复制，去<a href="https://json-to-js.com/" target="_blank" rel="noopener noreferrer">https://json-to-js.com/<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>转为js数据。再把数据放到js文件夹（lottie.js）中用<code>module.exports ={ //转化的js数据}</code>格式导出。</p></blockquote> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token comment">//index.wxml</span>
+ <span class="token operator">&lt;</span>canvas <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">&quot;animate&quot;</span> id<span class="token operator">=</span><span class="token string">&quot;animate-canvas&quot;</span> canvas<span class="token operator">-</span>id<span class="token operator">=</span><span class="token string">&quot;animate-canvas&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">&gt;</span>
+
+<span class="token comment">//index.wxss</span>
+<span class="token punctuation">.</span>animate<span class="token punctuation">{</span>
+    width<span class="token punctuation">:</span> <span class="token number">750</span>rpx<span class="token punctuation">;</span>
+    height<span class="token punctuation">:</span> <span class="token number">750</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">//index.js</span>
+<span class="token keyword">const</span> Lottie <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../miniprogram_npm/lottie-miniapp/index.js'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>default
+<span class="token keyword">const</span> Animation <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'../../utils/lottie.js'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token function-variable function">onLoad</span><span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">const</span> canvasContext <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createCanvasContext</span><span class="token punctuation">(</span><span class="token string">'animate-canvas'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        canvasContext<span class="token punctuation">.</span>canvas <span class="token operator">=</span> <span class="token punctuation">{</span>
+            width<span class="token punctuation">:</span> <span class="token number">375</span><span class="token punctuation">,</span>
+            height<span class="token punctuation">:</span> <span class="token number">375</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+        lottie<span class="token punctuation">.</span><span class="token function">loadAnimation</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            renderer<span class="token punctuation">:</span> <span class="token string">'canvas'</span><span class="token punctuation">,</span> 
+            loop<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            autoplay<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+            animationData<span class="token punctuation">:</span> animationData<span class="token punctuation">,</span>
+            rendererSettings<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+                context<span class="token punctuation">:</span> canvasContext<span class="token punctuation">,</span>
+                clearCanvas<span class="token punctuation">:</span> <span class="token boolean">true</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">12/6/2019, 4:51:23 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/MINI/小程序npm的方式使用UI框架及组件化开发.html" class="prev">小程序npm的方式使用UI框架及组件化开发</a></span> <span class="next"><a href="/blog/CROSS/uniapp使用相关问题记录.html">uniapp使用相关问题记录</a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.18d8ef11.js" defer></script><script src="/blog/assets/js/2.17328759.js" defer></script><script src="/blog/assets/js/7.c3a78705.js" defer></script>
+  </body>
+</html>
