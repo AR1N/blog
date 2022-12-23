@@ -1,6 +1,6 @@
 ## vuepress搭建的博客:tada::tada::tada:   
 
-:alien: 链接： http://www.rkchuan.top/blog 
+:alien: 链接： https://ar1n.github.io/blog/
 
 ##  :rocket: start
 
